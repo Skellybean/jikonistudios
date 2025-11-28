@@ -1,7 +1,11 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-const LoadingScreen = ({ progress }) => {
+interface LoadingScreenProps {
+  progress?: number
+}
+
+const LoadingScreen = ({ progress }: LoadingScreenProps) => {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100">
             <div className="text-center max-w-md w-full px-6">
@@ -19,7 +23,7 @@ const LoadingScreen = ({ progress }) => {
                     <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
                 </div>
 
-                {/* Progress Bar (Optional) */}
+                {/* Progress Bar */}
                 {progress !== undefined && (
                     <div className="mb-4">
                         <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
@@ -40,4 +44,5 @@ const LoadingScreen = ({ progress }) => {
         </div>
     )
 }
-export default LoadingScreen;
+
+export default LoadingScreen
