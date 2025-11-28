@@ -17,7 +17,7 @@ export default function Home() {
     }, [])
 
     if (loading) {
-        return <Loadingscreen />
+        return <Loadingscreen progress={100}/>
     }
     return (
         <div className="min-h-screen bg-gray-50">
