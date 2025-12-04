@@ -9,7 +9,7 @@ const LoadingScreen = ({ progress }: LoadingScreenProps) => {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100">
             <div className="text-center max-w-md w-full px-6">
-                {/* Logo */}
+
                 <div className="mb-8">
                     <img
                         src="/logo.png"
@@ -18,12 +18,12 @@ const LoadingScreen = ({ progress }: LoadingScreenProps) => {
                     />
                 </div>
 
-                {/* Loading Spinner */}
+      
                 <div className="flex justify-center mb-6">
                     <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
                 </div>
 
-                {/* Progress Bar */}
+          
                 {progress !== undefined && (
                     <div className="mb-4">
                         <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
@@ -36,7 +36,6 @@ const LoadingScreen = ({ progress }: LoadingScreenProps) => {
                     </div>
                 )}
 
-                {/* Loading Text */}
                 <p className="text-gray-700 text-lg font-medium">
                     Preparing your experience...
                 </p>

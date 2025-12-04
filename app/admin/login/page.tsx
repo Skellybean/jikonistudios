@@ -27,12 +27,11 @@ export default function AdminLogin() {
                 body: JSON.stringify({ username, password }),
             })
 
-            // parse JSON safely
             let data: any = null
             try {
                 data = await res.json()
             } catch {
-                // non-JSON response
+                
             }
 
             if (res.ok && data?.token) {
@@ -42,7 +41,6 @@ export default function AdminLogin() {
                 return
             }
 
-            // prefer server message, fallback to status text
             setError(data?.message || res.statusText || 'Login failed')
         } catch (err) {
             setError('Unable to connect to server')
@@ -105,11 +103,6 @@ export default function AdminLogin() {
                         {loading ? 'Logging in...' : 'Login'}
                     </button>
                 </form>
-
-                <div className="mt-6 text-center text-sm text-gray-600">
-                    <p>Default: admin / admin123</p>
-                    <p className="mt-2 text-xs">API: {API_BASE}</p>
-                </div>
             </div>
         </div>
     )

@@ -3,9 +3,8 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
 const team = [
-  { name: 'Asha Mwangi', role: 'Founder & Creative Director', bio: 'Oversees design and creative direction.' },
-  { name: 'David Kimani', role: 'Head of Production', bio: 'Leads product development and operations.' },
-  { name: 'Maya Patel', role: 'Marketing & Partnerships', bio: 'Builds brand and community relationships.' },
+  { name: 'Evans Douglas Mucheru', role: 'Founder & Designer', bio: 'Oversees design and creative direction.' },
+  { name: 'Trevor Phell', role: 'Software Engineer', bio: 'Moringa School Graduate ' },
 ]
 
 export default function AboutUs() {
@@ -16,8 +15,8 @@ export default function AboutUs() {
       <header className="max-w-5xl mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">About Jikoni Studios</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          We design memorable products inspired by everyday kitchens and the stories that come with them.
-          Our team blends craft, photography and product design to bring unique pieces to life.
+          At Jikoni Studios, we design and install elegant, functional kitchens and wardrobes that transform everyday spaces into timeless works of art.
+          Our approach blends modern design, local craftsmanship, and premium materials to create interiors that reflect both style and practicality.
         </p>
       </header>
 
@@ -39,7 +38,7 @@ export default function AboutUs() {
 
           <div className="rounded-lg overflow-hidden shadow-lg bg-white">
             <div className="w-full h-56 bg-gray-200 flex items-center justify-center text-gray-500">
-              Hero image placeholder
+              <img src="pic1.jpg" alt='Jikoni Studios Featured' className='h-full'/>
             </div>
             <div className="p-4">
               <p className="text-sm text-gray-600">
@@ -55,9 +54,7 @@ export default function AboutUs() {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {team.map((member) => (
             <div key={member.name} className="bg-white p-5 rounded-lg shadow-sm">
-              <div className="w-full h-36 bg-gray-100 rounded-md mb-4 flex items-center justify-center text-gray-400">
-                Photo
-              </div>
+              
               <h4 className="font-semibold">{member.name}</h4>
               <p className="text-sm text-yellow-700 mb-2">{member.role}</p>
               <p className="text-sm text-gray-600">{member.bio}</p>

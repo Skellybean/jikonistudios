@@ -22,7 +22,6 @@ const fetchWithAuth = async (url: string, options: RequestInit = {}) => {
     })
 
     if (response.status === 401) {
-        // Token expired or invalid
         if (typeof window !== 'undefined') {
             localStorage.removeItem('admin_token')
             localStorage.removeItem('admin_user')
